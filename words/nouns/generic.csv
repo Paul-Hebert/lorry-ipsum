@@ -3,15 +3,13 @@ pickup truck
 vehicle
 lorry
 van
-cart
 dump truck
 cargo
 motor vehicle
-car
-tractor
 pickup
 tow truck
 gasoline engine
+diesel engine
 tire
 wheel
 trailer
@@ -41,32 +39,36 @@ body
 chassis
 cab chassis
 chipper body
-Combo Body
-Contractor Body
-Cutaway
-Cutaway Van
-Dovetail Landscape
-Dry Freight
-Dump Body
-Empty Cargo Van
-Glass Body
-Hauler Body
-Hooklift Body
-Landscape Dump
-Mechanics Body
-Mobility
-Other/Specialty
-Passenger Wagon
-Pickup
-Platform Body
-Refrigerated Body
-Rollback Body
-Service Body
-Service Utility Van
-Stake Bed
-Step Van / Walk-in
-Stripped Chassis
-Upfitted Cargo Van
-Welder Body
-Wrecker Body
-
+combo body
+contractor body
+cutaway
+cutaway van
+dovetail landscape
+dry freight
+dump body
+empty cargo van
+glass body
+hauler body
+hooklift body
+landscape dump
+mechanics body
+mobility
+specialty
+passenger wagon
+pickup
+platform body
+refrigerated body
+rollback body
+service body
+service utility van
+stake bed
+step van
+walk-in
+stripped chassis
+upfitted cargo van
+welder body
+wrecker body
+GVWR
+cab to axle ratio
+wheelbase
+body length

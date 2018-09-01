@@ -1,6 +1,6 @@
 sentenceBuilder = require('./sentenceBuilder');
 
-exports.buildParagraph = function(){
+exports.buildParagraph = function(acceptedOEMs){
     var defaultLength = 5;
     var lengthModifier = 3;
 
@@ -13,7 +13,7 @@ exports.buildParagraph = function(){
     var paragraph = "";
 
     for(var i = 0; i < currentLength; i++){
-        paragraph += sentenceBuilder.buildSentence();
+        paragraph += sentenceBuilder.buildSentence(acceptedOEMs);
     }
 
     return paragraph;

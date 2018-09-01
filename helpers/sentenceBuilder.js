@@ -13,11 +13,11 @@ getPunctuation = function(){
     }
 }
 
-exports.buildSentence = function(){
+exports.buildSentence = function(acceptedOEMs){
     var sentence = fetchRowFromCSV.fromURL("./words/sentence-structures.csv");
 
     do {
-        sentence = sentence.replace("{noun}", fetchWord.noun());
+        sentence = sentence.replace("{noun}", fetchWord.noun(acceptedOEMs));
         sentence = sentence.replace("{adjective}", fetchWord.adjective());
         sentence = sentence.replace("{verb}", fetchWord.verb());
     } while (sentence.indexOf("{") !== -1);

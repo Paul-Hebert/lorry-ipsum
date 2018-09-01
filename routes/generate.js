@@ -10,8 +10,14 @@ router.get('/', function (req, res, next) {
         count = 5;
     }
 
+    var acceptedOEMs = null;
+
+    if(typeof req.param("AcceptedOEMs") !== "undefined"){
+        acceptedOEMs = req.param("AcceptedOEMs").split(",");
+    }
+
     res.json({
-        data: contentGenerator.buildContent(count)
+        data: contentGenerator.buildContent(count, acceptedOEMs)
     });
 });
 

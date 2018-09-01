@@ -8,6 +8,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
         url += "?ParagraphCount=" + document.querySelector("[name=ParagraphCount]").value;
 
+        var selectedOEMInputs = document.querySelectorAll(':checked');
+
+        if(selectedOEMInputs.length > 0){
+            var params = []
+            selectedOEMInputs.forEach(function(input){
+                params.push(input.getAttribute("name"));
+            });
+
+            url += "&AcceptedOEMs=" + params.join(",");
+        }
+
         var xhr = new XMLHttpRequest();
         xhr.open('GET', url);
         xhr.send(null);
