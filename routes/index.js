@@ -1,14 +1,22 @@
 var express = require('express');
 var router = express.Router();
-var fetchWord = require('../helpers/fetchWord');
+var paragraphBuilder = require('../helpers/paragraphBuilder');
+
+var buildContent = function(){
+  var paragraphs = [];
+  var paragraphLength = 5;
+
+  for(var i = 0; i < paragraphLength; i++){
+    paragraphs.push(paragraphBuilder.buildParagraph());
+  }
+
+  return paragraphs;
+}
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { 
-    noun1: fetchWord.getNoun(),
-    noun2: fetchWord.getNoun(),
-    verb1: fetchWord.getVerb(),
-    adjective1: fetchWord.getAdjective(),
+    content:buildContent()
   });
 });
 

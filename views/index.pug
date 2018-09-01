@@ -2,4 +2,5 @@ extends layout
 
 block content
   h1 Lorry Ipsum
-  p The #{noun1} #{verb1} the #{adjective1} #{noun2};
+  each paragraph in content
+    p #{paragraph}
