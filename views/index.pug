@@ -1,6 +1,43 @@
 extends layout
 
+block scripts
+  script(src="/js/page-functions.js")
+
 block content
-  h1 Lorry Ipsum
-  each paragraph in content
-    p #{paragraph}
+  header
+    h1 Lorry Ipsum
+
+  aside
+    h2 Options
+    form
+      label Number of Paragraphs:
+        input(type='number', value='5', name='ParagraphCount')
+
+      h3 Allowed OEMs:
+      label 
+        input(type='checkbox', checked, name='Ford')
+        span Ford
+      label 
+        input(type='checkbox', checked, name='Chevy')
+        span Chevy
+      label 
+        input(type='checkbox', checked, name='GMC')
+        span GMC
+      label 
+        input(type='checkbox', checked, name='Dodge')
+        span Dodge
+
+      input(type='submit', value='Submit')
+
+  main
+    section
+      header
+        h2 Generated Text
+      #generatedContent
+        each paragraph in content
+          p #{paragraph}
+    section
+      header  
+        h2 API
+        p bla bla bla
+
