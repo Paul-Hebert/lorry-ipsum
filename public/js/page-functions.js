@@ -4,8 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
     form.addEventListener("submit", function(e){
         e.preventDefault();
 
+        var url = '/generate';
+
+        url += "?ParagraphCount=" + document.querySelector("[name=ParagraphCount]").value;
+
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/generate');
+        xhr.open('GET', url);
         xhr.send(null);
 
         xhr.onreadystatechange = function () {
