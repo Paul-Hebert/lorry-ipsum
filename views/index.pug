@@ -4,7 +4,7 @@ block scripts
   script(src="/js/page-functions.js")
 
 block content
-  header
+  header#header
     h1 Lorry Ipsum
 
   aside
@@ -15,34 +15,44 @@ block content
         input(type='number', value='5', name='ParagraphCount')
 
       h3 Allowed OEMs:
-      label 
+      label.checkboxLabel 
         input(type='checkbox', checked, name='Ford')
         span Ford
-      label 
+      label.checkboxLabel  
         input(type='checkbox', checked, name='Chevy')
         span Chevy
-      label 
+      label.checkboxLabel 
         input(type='checkbox', checked, name='GMC')
         span GMC
-      label 
+      label.checkboxLabel  
         input(type='checkbox', checked, name='Dodge')
         span Dodge
-      label 
+      label.checkboxLabel  
         input(type='checkbox', checked, name='International')
         span International
-      label 
+      label.checkboxLabel  
         input(type='checkbox', checked, name='Hino')
         span Hino
-      label 
+      label.checkboxLabel  
         input(type='checkbox', checked, name='Isuzu')
         span Isuzu
-      label 
+      label.checkboxLabel  
         input(type='checkbox', checked, name='Nissan')
         span Nissan
 
-      input(type='submit', value='Submit')
+      input(type='submit', value='Generate Text')
 
   main
+    section
+      header
+        h2 What is Lorry Ipsum?
+
+      p Lorem Ipsum is dummy text used by designers and typographers to generate designs and test typefaces without real content. Lorem Ipsum is traditionally a set of greek passages but recently a number of novelty custom lorem ipsum generators have been created for different industries.
+      p
+        a(href="https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators/", target="_BLANK") You can see some examples of other Lorem Ipsum generators here.
+      p Working for #[a(href="https://worktrucksolutions.com", target="_BLANK") Work Truck Solutions] I often need dummy text when designing or developing new features so I decided to make this generator for my coworkers and I to use.
+    
+      p You can use this page to generate different lengths of Lorry Ipsum as well as include  or exclude words from specific chassis manufacturers. There's also a simple API to allow you to integrate this tool into your applications.
     section
       header
         h2 Generated Text
@@ -53,6 +63,18 @@ block content
     section
       header  
         h2 API
-        #APIURLWrapper
-          code#APIURL https://lorry-ipsum.com/generate?ParagraphCount=5&AcceptedOEMs=Ford,Chevy,GMC,Dodge,International,Hino,Isuzu,Nissan
 
+      p Lorry Ipsum has a simple API which you are welcome to use in your applications. It does not require an access token. Simply hit the url <code>https://lorry-ipsum.com/generate</code> and append your settings as a query string. The API will return a JSON object containing an array of paragraphs. 
+      
+      p Here's an example endpoint URL using the settings you currently have selected. (You can change your selection to see how this URL changes.)
+
+      #APIURLWrapper
+        code.block#APIURL https://lorry-ipsum.com/generate?ParagraphCount=5&AcceptedOEMs=Ford,Chevy,GMC,Dodge,International,Hino,Isuzu,Nissan
+
+      h3 Paragraph Count
+      p You can choose how many paragraphs of text to generate with the <code>ParagraphCount</code> setting. If you do not include this setting it will default to 5. Here's an example URL generating 10 paragraphs:
+      code.block https://lorry-ipsum.com/generate?ParagraphCount=10
+
+      h3 Accepted OEMs
+      p You can choose which of the supported manufacturers' special words to include in the generated text with the <code>AcceptedOEMs</code> setting. If you do not include this parameter no OEMs will have their special words included. You can separate multiple OEMs with commas. Here's an example URL including Chevy and GMC:
+      code.block https://lorry-ipsum.com/generate?AcceptedOEMs=Chevy,GMC
