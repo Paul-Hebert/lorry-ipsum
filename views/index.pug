@@ -9,7 +9,8 @@ block content
 
   aside
     h2 Options
-    form
+    
+    form#formOptions
       label Number of Paragraphs:
         input(type='number', value='5', name='ParagraphCount')
 
@@ -33,9 +34,10 @@ block content
     section
       header
         h2 Generated Text
-      #generatedContent
-        each paragraph in content
-          p #{paragraph}
+      #generatedContentWrapper
+        #generatedContent
+          each paragraph in content
+            p #{paragraph}
     section
       header  
         h2 API
