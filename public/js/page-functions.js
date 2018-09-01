@@ -1,23 +1,31 @@
+var domain = "https://lorry-ipsum.com";
+
+function generateURL(){
+    var url = '/generate';
+
+    url += "?ParagraphCount=" + document.querySelector("[name=ParagraphCount]").value;
+
+    var selectedOEMInputs = document.querySelectorAll(':checked');
+
+    if(selectedOEMInputs.length > 0){
+        var params = []
+        selectedOEMInputs.forEach(function(input){
+            params.push(input.getAttribute("name"));
+        });
+
+        url += "&AcceptedOEMs=" + params.join(",");
+    }
+
+    return url;
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     var form = document.getElementById("formOptions");
     
     form.addEventListener("submit", function(e){
         e.preventDefault();
 
-        var url = '/generate';
-
-        url += "?ParagraphCount=" + document.querySelector("[name=ParagraphCount]").value;
-
-        var selectedOEMInputs = document.querySelectorAll(':checked');
-
-        if(selectedOEMInputs.length > 0){
-            var params = []
-            selectedOEMInputs.forEach(function(input){
-                params.push(input.getAttribute("name"));
-            });
-
-            url += "&AcceptedOEMs=" + params.join(",");
-        }
+        url = generateURL();
 
         var xhr = new XMLHttpRequest();
         xhr.open('GET', url);
@@ -52,4 +60,22 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         };
     }, false);
+
+    document.querySelectorAll('input').forEach(function(input){
+        input.addEventListener("change", function(){
+            // remove old content
+            var oldContent = document.getElementById("APIURL");
+
+            oldContent.parentNode.removeChild(oldContent);
+
+            // generate new content
+            var newHTML = document.createElement('code');
+            newHTML.id = "APIURL";
+
+            var newContent = document.createTextNode(domain + generateURL());
+            newHTML.appendChild(newContent)
+
+            document.getElementById("APIURLWrapper").appendChild(newHTML);
+        });
+    });
 });
