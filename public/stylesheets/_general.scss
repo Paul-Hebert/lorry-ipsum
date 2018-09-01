@@ -1,0 +1,36 @@
+*{
+    box-sizing:border-box;
+    color:#333;
+}
+
+aside, main, #header{
+    padding:$basePadding;
+}
+
+main{
+    padding-top:0;
+}
+
+aside{
+    background:$lightGrey;
+}
+
+section{
+    margin-top:1rem;
+    padding-top:1rem;
+    border-top:1px solid $lightGrey;
+}
+
+@media (min-width:60rem){
+    aside{
+        width:$sidebarWidth;
+        position:fixed;
+        left:0;
+        top:0;
+        bottom:0;
+    }
+
+    body{
+        padding-left:$sidebarWidth;
+    }
+}

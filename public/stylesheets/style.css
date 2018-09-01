@@ -3,7 +3,7 @@
   color: #333;
 }
 
-aside, main, #header, code.block {
+aside, main, #header {
   padding: 1rem;
 }
 
@@ -11,20 +11,27 @@ main {
   padding-top: 0;
 }
 
-aside, code {
+aside {
   background: #efeff0;
-}
-
-code.block {
-  width: 60rem;
-  overflow-x: auto;
-  display: block;
 }
 
 section {
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: 1px solid #efeff0;
+}
+
+@media (min-width: 60rem) {
+  aside {
+    width: 20rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+  body {
+    padding-left: 20rem;
+  }
 }
 
 p {
@@ -59,15 +66,13 @@ h2 {
   vertical-align: middle;
 }
 
-@media (min-width: 60rem) {
-  aside {
-    width: 20rem;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-  }
-  body {
-    padding-left: 20rem;
-  }
+code {
+  background: #efeff0;
+}
+
+code.block {
+  padding: 1rem;
+  width: 60rem;
+  overflow-x: auto;
+  display: block;
 }

@@ -1,0 +1,12 @@
+@import "_vars";
+
+code{
+    background:$lightGrey;
+
+    &.block{
+        padding:$basePadding;
+        width:60rem;
+        overflow-x:auto;
+        display:block;
+    }
+}
