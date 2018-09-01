@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // generate new content
             var newHTML = document.createElement('code');
             newHTML.id = "APIURL";
+            newHTML.className = "block";
 
             var newContent = document.createTextNode(domain + generateURL());
             newHTML.appendChild(newContent)
