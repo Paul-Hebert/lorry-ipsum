@@ -1,5 +1,6 @@
 p {
   max-width: 35rem;
+  font-family: "Roboto";
 }
 
 h1 {
@@ -8,4 +9,8 @@ h1 {
 
 h2 {
   margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab";
 }

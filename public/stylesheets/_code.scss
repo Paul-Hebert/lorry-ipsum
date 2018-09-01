@@ -2,6 +2,7 @@
 
 code{
     background:$lightGrey;
+    font-family:"Roboto Mono";
 
     &.block{
         padding:$basePadding;
@@ -9,4 +10,8 @@ code{
         overflow-x:auto;
         display:block;
     }
+}
+
+p code{
+    padding:0.1rem;
 }

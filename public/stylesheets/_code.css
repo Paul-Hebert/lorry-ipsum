@@ -1,5 +1,6 @@
 code {
   background: #efeff0;
+  font-family: "Roboto Mono";
 }
 
 code.block {
@@ -7,4 +8,8 @@ code.block {
   width: 60rem;
   overflow-x: auto;
   display: block;
+}
+
+p code {
+  padding: 0.1rem;
 }
