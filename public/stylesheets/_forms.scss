@@ -7,16 +7,34 @@
     margin: .4rem 0;
     border-radius: .1rem;
     cursor:pointer;
-    opacity:0.8;
-    transition:opacity 300ms;
-    
-    &:hover{
-        opacity:1;
+
+    input{
+        display:none;
     }
 
-    input, span{
-        display:inline-block;
-        vertical-align: middle;
+    span{
+        position:relative;
+        padding-left:2rem;
+
+        &:before{
+            position: absolute;
+            top: 0.1rem;
+            left: 0.1rem;
+            width: 1rem;
+            height: 1rem;
+            background: $lightGrey;
+            text-align: center;
+            line-height: 0.9;
+            content: "\2714";
+            color:$lightGrey;
+            transition:background 300ms;
+            border:1px solid $mediumGrey;
+        }
+    }
+
+    :checked + span:before{
+        background:$interactionColor;
+        border-color:$interactionColor;
     }
 }
 
@@ -30,11 +48,17 @@ select, [type=submit]{
     color:$lightGrey;
     background:$interactionColor;
     padding:$basePadding;
+
+    &:hover{
+        background:$interactionColor_Hover;
+    }
+}
+
+[type=submit], button, .checkboxLabel{
     cursor:pointer;
     transition:background 300ms, transform 300ms, box-shadow 300ms;
 
     &:hover{
-        background:$interactionColor_Hover;
         transform:scale(1.02);
         box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
     }
