@@ -9,9 +9,11 @@
 - Make form submission work withou JS enabled.
 - Logo
 - Better check mark icon
+- Give headers linkable IDs
 
 # Content
 - Write "Under the Hood" section explaining how this works and how to build your own.
+- Show example result in API section
 
 # Security
 - Check that OEM paths are legit (check against real options)
