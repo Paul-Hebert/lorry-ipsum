@@ -7,6 +7,8 @@
     - Style
     - JS
 - Make form submission work withou JS enabled.
+- Logo
+- Better check mark icon
 
 # Content
 - Write "Under the Hood" section explaining how this works and how to build your own.
@@ -18,6 +20,8 @@
 # Misc.
 - Changed AcceptedOEMs to AcceptedCategories for easier reuse
 - Write ReadMe for github home page
+- Split view into partials
+- Better configure SASS compilation process
 
 # Deployment
 - Buy domain
