@@ -5,7 +5,7 @@ function generateURL(){
 
     url += "?ParagraphCount=" + document.querySelector("[name=ParagraphCount]").value;
 
-    var selectedOEMInputs = document.querySelectorAll(':checked');
+    var selectedOEMInputs = document.querySelectorAll('input:checked');
 
     if(selectedOEMInputs.length > 0){
         var params = []
