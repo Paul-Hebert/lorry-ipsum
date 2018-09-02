@@ -13,7 +13,11 @@ block content
     
     form#formOptions(autocomplete="off")
       label Number of Paragraphs:
-        input(type='number', value='5', name='ParagraphCount')
+        select(name='ParagraphCount')
+          - var n = 1;
+          while n <= 20
+            option(value=n, selected=(n === 5))= n++
+  
 
       h3 Allowed OEMs:
       label.checkboxLabel 

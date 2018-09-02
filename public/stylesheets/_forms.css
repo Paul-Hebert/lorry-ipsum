@@ -17,3 +17,8 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+select {
+  display: block;
+  width: 100%;
+}
