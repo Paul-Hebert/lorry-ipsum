@@ -27,7 +27,7 @@
             line-height: 0.9;
             content: "\2714";
             color:$lightGrey;
-            transition:background 300ms, color 300ms;
+            transition:background $baseDuration, color $baseDuration;
             border:1px solid $mediumGrey;
         }
     }
@@ -57,7 +57,7 @@ select, [type=submit]{
 
 [type=submit], button, .checkboxLabel{
     cursor:pointer;
-    transition:background 300ms, transform 300ms, box-shadow 300ms;
+    transition:background $baseDuration, transform $baseDuration, box-shadow $baseDuration;
 
     &:hover{
         transform:scale(1.02);
