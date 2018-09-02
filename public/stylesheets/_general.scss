@@ -4,6 +4,10 @@
     box-sizing:border-box;
 }
 
+body{
+    background:$white;
+}
+
 aside, main, #header{
     padding:$basePadding;
 }

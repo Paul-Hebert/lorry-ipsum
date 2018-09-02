@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: #fafafa;
+}
+
 aside, main, #header {
   padding: 1rem;
 }
@@ -71,7 +75,7 @@ a:hover {
 .checkboxLabel {
   display: block;
   padding: 0.1rem;
-  background: #fff;
+  background: #fafafa;
   margin: .4rem 0;
   border-radius: .1rem;
   cursor: pointer;
@@ -97,13 +101,14 @@ a:hover {
   line-height: 0.9;
   content: "\2714";
   color: #efeff0;
-  transition: background 300ms;
+  transition: background 300ms, color 300ms;
   border: 1px solid #cccccf;
 }
 
 .checkboxLabel :checked + span:before {
   background: #ce432b;
   border-color: #ce432b;
+  color: #fafafa;
 }
 
 select, [type=submit] {

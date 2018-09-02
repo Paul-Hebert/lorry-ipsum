@@ -3,7 +3,7 @@
 .checkboxLabel{
     display:block;
     padding: 0.1rem;
-    background: #fff;
+    background: $white;
     margin: .4rem 0;
     border-radius: .1rem;
     cursor:pointer;
@@ -27,7 +27,7 @@
             line-height: 0.9;
             content: "\2714";
             color:$lightGrey;
-            transition:background 300ms;
+            transition:background 300ms, color 300ms;
             border:1px solid $mediumGrey;
         }
     }
@@ -35,6 +35,7 @@
     :checked + span:before{
         background:$interactionColor;
         border-color:$interactionColor;
+        color:$white;
     }
 }
 

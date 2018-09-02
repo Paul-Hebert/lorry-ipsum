@@ -1,7 +1,7 @@
 .checkboxLabel {
   display: block;
   padding: 0.1rem;
-  background: #fff;
+  background: #f0f0ff;
   margin: .4rem 0;
   border-radius: .1rem;
   cursor: pointer;
@@ -27,13 +27,14 @@
   line-height: 0.9;
   content: "\2714";
   color: #efeff0;
-  transition: background 300ms;
+  transition: background 300ms, color 300ms;
   border: 1px solid #cccccf;
 }
 
 .checkboxLabel :checked + span:before {
   background: #ce432b;
   border-color: #ce432b;
+  color: #f0f0ff;
 }
 
 select, [type=submit] {
