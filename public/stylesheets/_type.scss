@@ -1,5 +1,9 @@
 @import "_vars";
 
+*{
+    color:$textColor;
+}
+
 p{
     max-width:35rem;
     font-family:"Roboto"
@@ -15,6 +19,15 @@ h2{
 
 h1, h2, h3, h4, h5, h6{
     font-family:"Roboto Slab"
+}
+
+a{
+    color:$interactionColor;
+    transition:color 300ms;
+
+    &:hover{
+        color:$interactionColor_Hover;
+    }
 }
 
 .sub-header{

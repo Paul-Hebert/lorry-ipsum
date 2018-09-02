@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  color: #333;
 }
 
 aside, main, #header {
@@ -25,13 +24,17 @@ section {
   aside {
     width: 20rem;
     position: fixed;
-    left: 0;
+    right: 0;
     top: 0;
     bottom: 0;
   }
   body {
-    padding-left: 20rem;
+    padding-right: 20rem;
   }
+}
+
+* {
+  color: #33333f;
 }
 
 p {
@@ -49,6 +52,15 @@ h2 {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Slab";
+}
+
+a {
+  color: #ce432b;
+  transition: color 300ms;
+}
+
+a:hover {
+  color: #ff5132;
 }
 
 .sub-header {
@@ -79,6 +91,26 @@ h1, h2, h3, h4, h5, h6 {
 select, [type=submit] {
   display: block;
   width: 100%;
+}
+
+[type=submit], button {
+  border: none;
+  color: #efeff0;
+  background: #ce432b;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background 300ms, transform 300ms, box-shadow 300ms;
+}
+
+[type=submit]:hover, button:hover {
+  background: #ff5132;
+  transform: scale(1.02);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+[type=submit]:active, button:active {
+  transform: scale(0.98);
+  box-shadow: 0px 0px 0px 0px transparent;
 }
 
 code {

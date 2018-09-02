@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+aside, main, #header {
+  padding: 1rem;
+}
+
+main {
+  padding-top: 0;
+}
+
+aside {
+  background: #efeff0;
+}
+
+section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #efeff0;
+}
+
+@media (min-width: 60rem) {
+  aside {
+    width: 20rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  body {
+    padding-right: 20rem;
+  }
+}

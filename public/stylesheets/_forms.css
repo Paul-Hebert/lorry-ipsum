@@ -22,3 +22,23 @@ select, [type=submit] {
   display: block;
   width: 100%;
 }
+
+[type=submit], button {
+  border: none;
+  color: #efeff0;
+  background: #ce432b;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background 300ms, transform 300ms, box-shadow 300ms;
+}
+
+[type=submit]:hover, button:hover {
+  background: #ff5132;
+  transform: scale(1.02);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+[type=submit]:active, button:active {
+  transform: scale(0.98);
+  box-shadow: 0px 0px 0px 0px transparent;
+}
