@@ -61,6 +61,17 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     }, false);
 
+    document.querySelectorAll('.boundNumberRange input').forEach(function(input){
+        input.addEventListener("change", function(){
+            var siblings = input.parentNode.childNodes;
+            siblings.forEach(function(sibling){
+                if(sibling !== input){
+                    sibling.value = input.value;
+                }
+            });
+        });
+    });
+
     document.querySelectorAll('input').forEach(function(input){
         input.addEventListener("change", function(){
             // remove old content

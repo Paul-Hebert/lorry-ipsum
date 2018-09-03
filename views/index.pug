@@ -12,13 +12,11 @@ block content
     h2 Options
     
     form#formOptions(autocomplete="off")
-      label Number of Paragraphs:
-        select(name='ParagraphCount')
-          - var n = 1;
-          while n <= 20
-            option(value=n, selected=(n === 5))= n++
+      h3 Number of Paragraphs:
+      span.boundNumberRange
+        input(name='ParagraphCount', type="number", min="0", max="40", value="5")
+        input(type="range", min="1", max="40", value="5")
   
-
       h3 Allowed OEMs:
       label.checkboxLabel 
         input(type='checkbox', checked, name='Ford')
