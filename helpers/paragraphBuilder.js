@@ -1,14 +1,12 @@
 sentenceBuilder = require('./sentenceBuilder');
+configs = require("../configs").values;
 
 exports.buildParagraph = function(acceptedOEMs){
-    var defaultLength = 5;
-    var lengthModifier = 3;
-
-    var currentModifier = Math.floor(Math.random() * lengthModifier);
+    var currentModifier = Math.floor(Math.random() * configs.paragraphLengthVariability);
 
     currentModifier = Math.random() > .5 ? currentModifier : currentModifier * -1;
 
-    var currentLength = defaultLength + currentModifier;
+    var currentLength = configs.paragraphLength + currentModifier;
 
     var paragraph = "";
 

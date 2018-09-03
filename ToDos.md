@@ -1,16 +1,14 @@
 # Language Processing
 - Split sentences into clauses
 - Handle plurality and tenses
+- Logic to avoid duplicate words in sentences
 
 # UI
-- Switch ParagraphCount to combined number/range input
-    - Style
-    - JS
-- Make form submission work withou JS enabled.
+- Make form submission work without JS enabled.
 - Logo
 - Better check mark icon
 - Give headers linkable IDs
-- Better code styling
+- Better code element styling
 - Generated Text
     - Copy Button
     - Max height
