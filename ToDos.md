@@ -10,6 +10,11 @@
 - Logo
 - Better check mark icon
 - Give headers linkable IDs
+- Better code styling
+- Generated Text
+    - Copy Button
+    - Max height
+    - Styling
 
 # Content
 - Write "Under the Hood" section explaining how this works and how to build your own.

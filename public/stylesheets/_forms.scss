@@ -1,11 +1,16 @@
 @import "_vars";
 
-.checkboxLabel{
+.checkboxLabel, [type=number]{
     display:block;
     padding: 0.1rem;
     background: $white;
     margin: .4rem 0;
     border-radius: .1rem;
+    border:none;
+    font-size:1rem;
+}
+
+.checkboxLabel{
     cursor:pointer;
 
     input{
@@ -55,11 +60,11 @@ select, [type=submit]{
     }
 }
 
-[type=submit], button, .checkboxLabel{
+[type=submit], button, .checkboxLabel, [type=number]{
     cursor:pointer;
     transition:background $baseDuration, transform $baseDuration, box-shadow $baseDuration;
 
-    &:hover{
+    &:hover, &:focus{
         transform:scale(1.02);
         box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
     }
@@ -68,4 +73,10 @@ select, [type=submit]{
         transform:scale(0.98);
         box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
     }
+}
+
+[type=number], [type=range]{
+    display:block;
+    width:100%;
+    margin:0;
 }

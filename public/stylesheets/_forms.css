@@ -1,9 +1,14 @@
-.checkboxLabel {
+.checkboxLabel, [type=number] {
   display: block;
   padding: 0.1rem;
-  background: #f0f0ff;
+  background: #fafafa;
   margin: .4rem 0;
   border-radius: .1rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.checkboxLabel {
   cursor: pointer;
 }
 
@@ -34,7 +39,7 @@
 .checkboxLabel :checked + span:before {
   background: #ce432b;
   border-color: #ce432b;
-  color: #f0f0ff;
+  color: #fafafa;
 }
 
 select, [type=submit] {
@@ -53,17 +58,23 @@ select, [type=submit] {
   background: #ff5132;
 }
 
-[type=submit], button, .checkboxLabel {
+[type=submit], button, .checkboxLabel, [type=number] {
   cursor: pointer;
   transition: background 300ms, transform 300ms, box-shadow 300ms;
 }
 
-[type=submit]:hover, button:hover, .checkboxLabel:hover {
+[type=submit]:hover, [type=submit]:focus, button:hover, button:focus, .checkboxLabel:hover, .checkboxLabel:focus, [type=number]:hover, [type=number]:focus {
   transform: scale(1.02);
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
-[type=submit]:active, button:active, .checkboxLabel:active {
+[type=submit]:active, button:active, .checkboxLabel:active, [type=number]:active {
   transform: scale(0.98);
   box-shadow: 0px 0px 0px 0px transparent;
+}
+
+[type=number], [type=range] {
+  display: block;
+  width: 100%;
+  margin: 0;
 }
