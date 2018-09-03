@@ -1,4 +1,5 @@
 fetchRowFromCSV = require("./fetchRowFromCSV");
+configs = require('../configs').values;
 
 var chanceOfOEMWord = .2
 
@@ -16,9 +17,13 @@ exports.noun = function (acceptedOEMs) {
         if(Math.random() > 1 - chanceOfOEMWord){
             // We're using an OEM word. Lets pick one of our OEMs at random.
             var selectedOEMIndex = Math.floor(Math.random() * acceptedOEMs.length);
-            var selectedOEMName = acceptedOEMs[selectedOEMIndex].toLowerCase();
+            var selectedOEMName = acceptedOEMs[selectedOEMIndex];
 
-            url = "./words/nouns/" + selectedOEMName + ".csv";
+            if(configs.acceptedOEMs.indexOf(selectedOEMName) !== "-1"){
+                url = "./words/nouns/" + selectedOEMName.toLowerCase() + ".csv";
+            } else{
+                console.error('Invalid OEM');
+            }
         }
     }
 

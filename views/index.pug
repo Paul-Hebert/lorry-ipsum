@@ -14,34 +14,14 @@ block content
     form#formOptions(autocomplete="off")
       h3 Number of Paragraphs:
       span.boundNumberRange
-        input(name='ParagraphCount', type="number", min="0", max="40", value="5")
-        input(type="range", min="1", max="40", value="5")
+        input(name='ParagraphCount', type="number", min="0", max="40", value=paragraphCount)
+        input(type="range", min="1", max="40", value=paragraphCount)
   
       h3 Allowed OEMs:
-      label.checkboxLabel 
-        input(type='checkbox', checked, name='Ford')
-        span Ford
-      label.checkboxLabel  
-        input(type='checkbox', checked, name='Chevy')
-        span Chevy
-      label.checkboxLabel 
-        input(type='checkbox', checked, name='GMC')
-        span GMC
-      label.checkboxLabel  
-        input(type='checkbox', checked, name='Dodge')
-        span Dodge
-      label.checkboxLabel  
-        input(type='checkbox', checked, name='International')
-        span International
-      label.checkboxLabel  
-        input(type='checkbox', checked, name='Hino')
-        span Hino
-      label.checkboxLabel  
-        input(type='checkbox', checked, name='Isuzu')
-        span Isuzu
-      label.checkboxLabel  
-        input(type='checkbox', checked, name='Nissan')
-        span Nissan
+      each oem in acceptedOEMs
+        label.checkboxLabel 
+          input(type='checkbox', checked, name=oem)
+          span #{oem}
 
       input(type='submit', value='Generate Text')
 

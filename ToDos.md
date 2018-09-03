@@ -18,12 +18,8 @@
 - Write "Under the Hood" section explaining how this works and how to build your own.
 - Show example result in API section
 
-# Security
-- Check that OEM paths are legit (check against real options)
-    - Can we define this array server-side and reuse it?
-
 # Misc.
-- Changed AcceptedOEMs to AcceptedCategories for easier reuse
+- Change AcceptedOEMs to AcceptedCategories for easier reuse
 - Write ReadMe for github home page
 - Split view into partials
 - Better configure SASS compilation process
