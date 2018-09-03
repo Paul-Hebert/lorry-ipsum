@@ -90,4 +90,10 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("APIURLWrapper").appendChild(newHTML);
         });
     });
+
+    document.getElementById('copy').addEventListener('click', function(){
+        window.getSelection().selectAllChildren( document.getElementById("generatedContent"));
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+    });
 });

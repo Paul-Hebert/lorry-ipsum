@@ -10,7 +10,7 @@
 - Give headers linkable IDs
 - Better code element styling
 - Generated Text
-    - Copy Button
+    - Style Copy Button
     - Max height
     - Styling
 
