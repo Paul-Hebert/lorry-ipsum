@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #f0f0ff;
+  background: #fafafa;
 }
 
 aside, main, #header {
@@ -22,6 +22,24 @@ section {
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: 1px solid #efeff0;
+}
+
+section header {
+  width: 35rem;
+  position: relative;
+}
+
+section header button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#generatedContent {
+  background: #efeff0;
+  padding: 0.1rem 1.1rem;
+  width: 35rem;
+  margin-top: 0.5rem;
 }
 
 @media (min-width: 60rem) {

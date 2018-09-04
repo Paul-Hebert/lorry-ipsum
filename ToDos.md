@@ -1,5 +1,4 @@
 # Language Processing
-- Split sentences into clauses
 - Handle plurality and tenses
 - Logic to avoid duplicate words in sentences
 
@@ -11,8 +10,10 @@
 - Better code element styling
 - Generated Text
     - Style Copy Button
+        - success toastr
     - Max height
-    - Styling
+- Check responsiveness
+- False loading indicator when regenerating text? Or some sort of visual indicator of the change?
 
 # Content
 - Write "Under the Hood" section explaining how this works and how to build your own.
