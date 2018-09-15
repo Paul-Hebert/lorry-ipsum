@@ -26,7 +26,6 @@
 
 # Misc.
 - Change AcceptedOEMs to AcceptedCategories for easier reuse
-- Write ReadMe for github home page
 - Split view into partials
 - Better configure SASS compilation process
 
