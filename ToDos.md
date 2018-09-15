@@ -34,6 +34,4 @@
 - Typescript?
 
 # Deployment
-- Buy domain
-- Configure Hosting
 - Configure SSL
