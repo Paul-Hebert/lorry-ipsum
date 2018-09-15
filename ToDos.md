@@ -3,6 +3,11 @@
 - Logic to avoid duplicate words in sentences
 
 # UI
+- Redesign Layout
+    - Add "Hero" section
+    - Make form sidebar only show for form section.
+    - Sidebar/header links?
+    - subtle truck icon background?
 - Make form submission work without JS enabled.
 - Logo
 - Better check mark icon
@@ -24,6 +29,9 @@
 - Write ReadMe for github home page
 - Split view into partials
 - Better configure SASS compilation process
+
+# Fun Tech Stuff
+- Typescript?
 
 # Deployment
 - Buy domain
