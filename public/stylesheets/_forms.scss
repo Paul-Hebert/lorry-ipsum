@@ -80,3 +80,7 @@ select, [type=submit]{
     width:100%;
     margin:0;
 }
+
+[type=submit]{
+    -webkit-appearance: none;
+}
