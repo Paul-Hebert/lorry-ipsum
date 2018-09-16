@@ -4,6 +4,7 @@
 
 body {
   background: #fafafa;
+  overflow-x: hidden;
 }
 
 aside, main, #header {
@@ -181,6 +182,7 @@ code.block {
   width: 60rem;
   overflow-x: auto;
   display: block;
+  max-width: 100%;
 }
 
 p code {

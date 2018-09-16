@@ -5,6 +5,8 @@
 # UI
 - Redesign Layout
     - Add "Hero" section
+        - Choose Header Image
+        - Design layout
     - Make form sidebar only show for form section.
     - Sidebar/header links?
     - subtle truck icon background?
@@ -16,7 +18,6 @@
 - Generated Text
     - Style Copy Button
         - success toastr
-    - Max height
 - Check responsiveness
 - False loading indicator when regenerating text? Or some sort of visual indicator of the change?
 

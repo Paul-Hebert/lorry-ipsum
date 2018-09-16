@@ -4,6 +4,7 @@
 
 body {
   background: #fafafa;
+  overflow-x: hidden;
 }
 
 aside, main, #header {
